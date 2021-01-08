@@ -1,0 +1,19 @@
+mode: ContinuousDeployment
+branches:
+  master:
+    tag: master
+    increment: Patch
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+  release:
+    tag: beta
+    increment: Patch
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+  feature:
+    tag: useBranchName
+    increment: Inherit
+    prevent-increment-of-merged-branch-version: true
+    track-merge-target: false
+ignore:
+  sha: []
